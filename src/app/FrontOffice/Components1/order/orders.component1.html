@@ -1,0 +1,53 @@
+<h2>Add Product</h2>
+
+<label for="productId">Product ID:</label>
+<input type="number" id="productId" [(ngModel)]="productId">
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" [(ngModel)]="quantity">
+
+<button (click)="addProduct()">Add to Cart</button>
+
+<hr>
+
+<h2>Cart</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of selectedProducts">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price | currency}}</td>
+      <td>
+        <button (click)="removeProduct(product)">-</button>
+        {{product.quantity}}
+        <button (click)="addProduct()">+</button>
+      </td>
+      <td>{{product.price * product.quantity | currency}}</td>
+      <td>
+        <button (click)="removeProduct(product)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total:</td>
+      <td>{{totalPrice | currency}}</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<button [disabled]="selectedProducts.length === 0" (click)="submitOrder()">Submit Order</button>
+
+<div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
+

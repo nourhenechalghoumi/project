@@ -1,0 +1,73 @@
+/* Style for the labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the input fields */
+  input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the Add to Cart button */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Style for the table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the table header */
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the table cells */
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for the Remove button */
+  button[type="button"] {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Style for the Submit Order button */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Style for the success message */
+  .success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 20px;
+  }
+  
